@@ -14,11 +14,11 @@ function App() {
         <TopBar/>
         <Routes>
             <Route exact={true} path="/" element={<Home/>}/>
-            <Route path="/login" element={user ? <Home/> : <Login/>}/>
             <Route path="/register" element={user ? <Home/> : <Resister/>}/>
+            <Route path="/login" element={user ? <Home/> : <Login/>}/>
             <Route path="/write" element={user ? <Write/> : <Resister/>}/>
             <Route path="/settings" element={user ? <Settings/> :<Resister/>}/>
-            <Route path="//post/:postId" element={<Single/>}/>
+            <Route path="/post/:postId" element={<Single/>}/>
         </Routes>
      </BrowserRouter>
   );
