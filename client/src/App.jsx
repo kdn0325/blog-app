@@ -8,17 +8,17 @@ import Resister from "./pages/register/Register";
 import React from "react";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 function App() {
-  const user =true;
+  const currentUser =false;
   return (
      <BrowserRouter>
         <TopBar/>
         <Routes>
-            <Route exact={true} path="/" element={<Home/>}/>
-            <Route path="/register" element={user ? <Home/> : <Resister/>}/>
-            <Route path="/login" element={user ? <Home/> : <Login/>}/>
-            <Route path="/write" element={user ? <Write/> : <Resister/>}/>
-            <Route path="/settings" element={user ? <Settings/> :<Resister/>}/>
-            <Route path="/post/:postId" element={<Single/>}/>
+            <Route exact path="/" element={<Home/>}/>
+            <Route path="/register" element={currentUser ? <Home/> : <Resister/>}/>
+            <Route path="/login" element={currentUser ? <Home/> : <Login/>}/>
+            <Route path="/write" element={currentUser ? <Write/> : <Resister/>}/>
+            <Route path="/settings" element={currentUser ? <Settings/> :<Resister/>}/>
+            <Route path="/post/:id" element={<Single/>}/>
         </Routes>
      </BrowserRouter>
   );

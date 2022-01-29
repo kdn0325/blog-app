@@ -1,23 +1,43 @@
-import React from 'react'
+import axios from 'axios'
+import React, {useState, useEffect } from 'react'
+import { useLocation,Link } from 'react-router-dom'
 import "./SinglePost.css"
 
 export default function SinglePost() {
+    const location = useLocation()
+    const path= location.pathname.split("/")[2];
+    const [post,setPost]= useState({})
+
+    useEffect(()=>{
+        const getPost = async()=>{
+            const res = await axios.get("/posts/"+path);
+            setPost(res.data)
+        };
+        getPost()
+    },[path])
     return (
         <div className="singlePost">
             <div className="singlePostWrapper">
-                <img className="singlePostImg" src="http://placekitten.com/800/300" alt="" />
+                {post.photo &&(
+                <img className="singlePostImg" src={post.photo} alt="" />
+                )}
                 <h1 className="singlePostTitle">
-                    Lorem ipsum dolor sit amet.
+                    {post.title}
                     <div className="singlePostEdit">
                         <i className="singlePostIcon far fa-edit"></i>
                         <i className="singlePostIcon fas fa-trash-alt"></i>
                     </div>
                 </h1>
                 <div className="singlePostInfo">
-                    <span className="singPostAuthor">Autor: <b>Abel</b></span>
-                    <span className="singPostDate">1 hour ago</span>
+                    <span className="singPostAuthor">
+                        Autor:
+                        <Link to={`/?user=${post.username}`} className="link" >
+                         <b>{post.username}</b>
+                        </Link>
+                    </span>
+                    <span className="singPostDate">{new Date(post.createdAt).toDateString()}</span>
                 </div>
-                <p className="singlePostDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita delectus molestias nisi porro rem architecto sapiente praesentium nulla, nostrum dolorum repellat laborum assumenda placeat consectetur quos quia laudantium numquam! Tempore. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, necessitatibus provident? Dolore numquam iusto pariatur modi. Quos, incidunt culpa! Voluptatibus cum temporibus consectetur adipisci repellat vitae repellendus iure blanditiis laborum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptatibus dolorem hic amet quam in delectus. Quam nam provident rem? Architecto, accusamus adipisci. Facilis fugit quos illum hic reprehenderit quis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto eligendi officiis laborum tempore praesentium quis nesciunt sed magni odit nostrum. Animi odit dolor deserunt voluptatibus dolorem obcaecati iusto ipsa explicabo?</p>
+                <p className="singlePostDesc">{post.desc}</p>
             </div>
         </div>
     )
