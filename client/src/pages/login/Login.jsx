@@ -11,11 +11,11 @@ export default function Login() {
         e.preventDefault();
         dispatch({type:"LOGIN_START"});
         try{
-            const res = axios.post("/auth/login",{
+            const res = await axios.post("/auth/login",{
                 username:userRef.current.value,
                 password:passwordRef.current.value,
             });
-            dispatch({type:"LOGIN_SUCESS",payload:res.data});
+            dispatch({type:"LOGIN_SUCCESS",payload:res.data});
         }catch(err){
             dispatch({type:"LOGIN_FAILURE"});
         }
@@ -29,7 +29,7 @@ export default function Login() {
                 <input type="text" className="loginInput" placeholder="Enter your Username..." ref={userRef}/>
                 <label>Password</label>
                 <input type="password" className="loginInput" placeholder="Enter your Password..." ref={passwordRef}/>
-                <button className="loginButton" type="submit">Login</button>
+                <button className="loginButton" type="submit" disabled={isFetching}>Login</button>
                 <button className="loginResister">Resister</button>
             </form>
         </div>

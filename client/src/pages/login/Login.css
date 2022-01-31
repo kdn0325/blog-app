@@ -28,6 +28,11 @@
 
 }
 
+.loginButton:disabled{
+    cursor: not-allowed;
+    background-color: lightcoral;
+}
+
 .loginButton{
     margin-top: 20px;
     cursor: pointer;
