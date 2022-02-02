@@ -29,26 +29,26 @@ export default function Register() {
                 <input 
                 type="text" 
                 className="registerInput"
-                placeholder="Enter your Username..." 
+                placeholder="이름을 입력해주세요..." 
                 onChange={e=>setUsername(e.target.value)}
                  />
                 <label>Email</label>
                 <input 
                 type="text" 
                 className="registerInput"
-                placeholder="Enter your Email..." 
+                placeholder="이메일을 입력해주세요..." 
                 onChange={e=>setEmail(e.target.value)}
                  />
                 <label>Password</label>
                 <input
                 type="password"
                 className="registerInput"
-                placeholder="Enter your Password..." 
+                placeholder="비밀번호를 입력해주세요..." 
                 onChange={e=>setPassword(e.target.value)}
                 />
-                <button className="registerButton" type="submit">register</button>
-                <button className="registerResister">Login</button>
-                {error && <span style={{color:"red", marginTop:"10px"}}>Something Went Wrong</span>}
+                <button className="registerButton" type="submit">회원가입</button>
+                <button className="registerResister">로그인</button>
+                {error && <span style={{color:"red", marginTop:"10px"}}>틀렸습니다</span>}
             </form>
         </div>
     )
