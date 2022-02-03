@@ -9,8 +9,7 @@
   },
   "scripts": {
       "start": "node index.js",
-      "build": "ng build",
-      "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build" 
+      "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
