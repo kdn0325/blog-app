@@ -2,14 +2,14 @@
   "name": "api",
   "version": "1.0.0",
   "main": "index.js",
-  "engine":{
-    "node":"16.13.1",
-    "npm":"8.3.0",
-    "yarn":"1.22.17"
-  },
   "scripts": {
       "start": "node index.js",
       "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "engines": {
+    "node": "16.13.1",
+    "npm":"8.3.0",
+    "yarn":"1.22.17"
   },
   "keywords": [],
   "author": "",
