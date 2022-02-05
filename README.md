@@ -1,6 +1,6 @@
 # Blog-app for DeskTop
 
-- MONGODB,Node-express,REACT,NODE.JS를 활용하여 제작하였습니다
+- MONGO-DB,Node-express,React.Js,Node.JS를 활용하여 제작하였습니다
 
 ## --> [Link](https://kdn-blog.herokuapp.com/)
 
