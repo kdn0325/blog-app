@@ -8,4 +8,4 @@
 ## --> [Link](https://kdn-blog.herokuapp.com/)
 
 ### Initial Screen
-<img width="1677" alt="blog" src="https://user-images.githubusercontent.com/91298955/159221721-8e1dc698-7f63-4654-87d5-8801a9a370ab.png">
+<img width="1677" alt="blog" src="https://user-images.githubusercontent.com/91298955/168579324-ffb5dc01-6697-4909-b6b2-ed06ad74e036.png">
