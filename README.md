@@ -7,5 +7,7 @@
 
 ## --> [Link](https://kdn-blog.herokuapp.com/)
 
+## [![Repository Card](https://widget.realdeveloper.pro/api/card?user=kdn0325&repo=blog-app)](https://github.com/kdn0325/blog-app')
+
 ### Initial Screen
 <img width="1677" alt="blog" src="https://user-images.githubusercontent.com/91298955/168579324-ffb5dc01-6697-4909-b6b2-ed06ad74e036.png">
