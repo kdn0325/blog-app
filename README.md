@@ -8,7 +8,7 @@
 ##
 
 <details>
-<summary><span style="color:red">&#9658;코드 리뷰 보기</span></summary>
+<summary><span style="color:red">&#128293; 클릭 하시면 느낀점 리뷰를 보실 수 있습니다. &#128591;</span></summary>
 <div markdown="1">       
   
 블로그앱은 Node.js와 Node.express를 사용하여 웹 서버를 직접 구현해보고 백엔드와의 협업 과정을 알아보고자 기초적인 REST API를 학습하기 위해 제작한 웹사이트입니다.
